@@ -39,7 +39,9 @@ def buscar_news(dados):
 			titulo.append(posicao['webTitle']) #salva em titulo = []
 			link.append(posicao['webUrl']) #salva em link=[]
 	if len(titulo) == 0:
-		print('Não foi encontrado nenhum post news, tente mais tarde')
+		print('Não foi encontrado nenhum news, tente mais tarde')
+	else:
+		exportar_csv(titulo, link, "news")
 
 def buscar_arts(dados):
 	titulo = []
@@ -50,6 +52,8 @@ def buscar_arts(dados):
 			link.append(posicao['webUrl']) #salva em link=[]
 	if len(titulo) == 0:
 		print('Não foi encontrado nenhum post sobre arts, tente mais tarde')
+	else:
+		exportar_csv(titulo, link, "arts")
 
 def main(): #pode ter qqr nome, preferir main pra informar q sera a 1ª acao do codigo
 	url = "https://content.guardianapis.com/search?api-key=12cafbaa-c05c-4407-8839-5209818138ec" #link fonecido pelo the guardian
@@ -66,7 +70,7 @@ def main(): #pode ter qqr nome, preferir main pra informar q sera a 1ª acao do 
 		print("0 - Sair")
 		while escolha != 0:
 			try:
-				escolha = int(input('Diite o numero referente a noticia q vc deseja baixa:'))
+				escolha = int(input('Digite o numero referente a noticia q vc deseja baixa:'))
 			except:
 				print('por favor digite apenas numero')
 

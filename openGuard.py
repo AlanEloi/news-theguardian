@@ -1,4 +1,4 @@
-## Exercício: criação um programa que consume a API do jornal The Guardian, mostrando o título e o link das notícas do dia: https://open-plataform.theguardian.com/ tomando cuidado para o email de informação da API não ir para a caixa de spam
+## Programa que consume a API do jornal The Guardian, mostrando o título e o link das notícas do dia: https://open-plataform.theguardian.com/ tomando cuidado para o email de informação da API não ir para a caixa de spam
 import requests #biblioteca HTTP do Python,simples e mais amigáveis ​​ao homem.
 import json #formato troca de dados entre sistemas,texto legível a humanos, no formato atributo-valor.
 import pandas as pd #exporta para excel
@@ -64,7 +64,7 @@ def main(): #pode ter qqr nome, preferir main pra informar q sera a 1ª acao do 
 		dados = response.json()
 		escolha = 4
 		print("1 - Esportes")
-		print("2 - Noticia")
+		print("2 - News")
 		print("3 - Artes")
 		print("4 - Todas")
 		print("0 - Sair")
@@ -91,42 +91,3 @@ def main(): #pode ter qqr nome, preferir main pra informar q sera a 1ª acao do 
 
 if __name__== "__main__":
 	main()
-
-
-
-
-		#print(posicao['webTitle']) #baixa titulo da noticia 5
-		#print(posicao['webUrl']) #baixa link da noticia 5
-		#print("------------------------------------------------------------")
-
-#	print(dados['response']['results'][5]['webTitle']) #baixa titulo da noticia 5
-#	print(dados['response']['results'][5]['webUrl']) #baixa link da noticia 5
-#else:
-#	print('Não foi possivel acessar a base de dados.')
-
-
-
-#	dados = response.json()
-#	print("Acessando dados do dia %s" % day)
-	
-
-
-#	print("Gerando arquivo csv... ")
-#	df = pd.DataFrame({'moedas':['Euro','Dollar','Bitcoin'],'Valores':[euro_real,dollar_real,btc_real]})
-
-#	df.to_csv('valores.csv', index=False, sep=";") 
-
-
-#	print("Arquivo importado com sucesso")
-
-#else:
-#	print("Site com problema!")
-
-
-
-#try:
-#	response = requests.get('https://content.guardianapis.com/search?api-key=12cafbaa-c05c-4407-8839-5209818138ec')
-#	print(response.text)
-#except Exception as e:
-#	print("Response deu erro:", e)
-#	print(texto)

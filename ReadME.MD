@@ -21,7 +21,7 @@ buscar_arts(dados)
 ### Execução
 > Pré-requisitos: Ter GIT e Python 3 instalados na máquina
 ```sh
-$ git clone https://github.com/VRPazdeJesus/news-theguardian.git
+$ git clone https://github.com/AlanEloi/news-theguardian.git
 $ cd news-theguardian
 $ pip install requests
 $ pip install pandas
